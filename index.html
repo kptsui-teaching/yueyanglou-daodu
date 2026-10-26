@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《岳陽樓記》範文導讀｜漢華中學中國語文科</title>
+<style>
+
+:root{
+  --blue:#2563eb;--blue-dark:#1d4ed8;--blue-soft:#eff6ff;--blue-mid:#dbeafe;
+  --ink:#1f2937;--muted:#4b5563;--line:#e5e7eb;--card:#fff;--bg:#f4f6fb;
+  --ok:#16a34a;--ok-bg:#dcfce7;--bad:#dc2626;--bad-bg:#fee2e2;--warn:#b45309;--warn-bg:#fef3c7;
+  --radius:14px;--shadow:0 1px 4px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65}
+a{color:var(--blue)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:100;border-radius:8px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(37,99,235,.06)}
+.topbar-inner{max-width:880px;margin:0 auto;padding:10px 14px 8px}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px}
+.brand .school{font-size:.85rem;color:var(--blue);font-weight:700;letter-spacing:.02em}
+.brand h1{margin:0;font-size:1.15rem;font-weight:800}
+.nav{display:flex;flex-wrap:wrap;gap:6px}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid transparent}
+.nav a:hover,.nav a:focus{background:var(--blue);color:#fff;outline:none}
+main{max-width:880px;margin:0 auto;padding:16px 14px 80px}
+.sec{margin:22px 0 28px;scroll-margin-top:110px}
+.sec>h2{margin:0 0 12px;font-size:1.35rem;color:var(--blue-dark);padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec>h3,.card h3{margin:16px 0 8px;font-size:1.08rem}
+.card{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}
+.pill{display:inline-block;background:var(--blue-soft);color:var(--blue-dark);border-radius:999px;padding:2px 10px;font-size:.85rem;font-weight:700;margin-right:4px}
+.muted{color:var(--muted);font-size:.95rem}
+.person{border-left:4px solid var(--blue);padding-left:12px;margin:10px 0}
+.story{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff}
+.story h4{margin:0 0 8px;color:var(--blue-dark)}
+.story dl{margin:0;display:grid;grid-template-columns:4.5em 1fr;gap:4px 8px}
+.story dt{font-weight:700;color:var(--muted)}.story dd{margin:0}
+.story .baihua{margin:10px 0 0;padding:10px 12px;background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 10px 10px 0;font-size:.95rem;line-height:1.65;color:#14532d}
+.story .baihua strong{color:#166534}
+.vocab{display:grid;gap:8px}
+.vocab-item{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:8px 12px;padding:10px 12px;background:#fafbff;border-radius:10px;border:1px solid var(--line)}
+.vocab-item b{color:var(--blue-dark)}
+@media(max-width:560px){.vocab-item{grid-template-columns:1fr}}
+.struct ul{margin:6px 0;padding-left:1.2em}.struct li{margin:4px 0}
+.student-form{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px}
+@media(max-width:640px){.student-form{grid-template-columns:1fr}}
+label.field{display:block;font-weight:700;font-size:.92rem;margin-bottom:4px}
+input.field,select.field{width:100%;min-height:48px;padding:10px 12px;font:inherit;border:2px solid #d1d5db;border-radius:10px;background:#fff}
+input.field:focus,select.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tabs button{flex:1;min-width:120px;min-height:48px;font:inherit;font-weight:700;border:2px solid var(--blue);border-radius:12px;background:#fff;color:var(--blue);cursor:pointer}
+.tabs button.active,.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.prog-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.95rem;color:var(--muted);margin:8px 0 4px}
+.bar{height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden}
+.bar>div{height:100%;background:var(--blue);width:0;transition:width .3s}
+.overall{background:var(--blue-soft);border:1px solid var(--blue-mid);border-radius:12px;padding:12px 14px;margin:12px 0}
+.opt{display:flex;align-items:flex-start;gap:10px;min-height:56px;padding:12px;margin:8px 0;border:2px solid #d1d5db;border-radius:12px;background:#fff;cursor:pointer;text-align:left}
+.opt input{width:22px;height:22px;margin-top:3px;flex:none}
+.opt.sel{border-color:var(--blue);background:var(--blue-soft)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.stem{font-size:1.08rem;font-weight:700;margin:0 0 10px}
+.fb{margin-top:12px;padding:12px;border-radius:10px}
+.fb.ok{background:var(--ok-bg)}.fb.bad{background:var(--bad-bg)}
+.btn{font:inherit;font-weight:700;min-height:52px;width:100%;margin-top:12px;border:0;border-radius:12px;background:var(--blue);color:#fff;cursor:pointer}
+.btn:disabled{background:#9ca3af;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn.ok{background:var(--ok)}
+.btn.warn{background:#d97706}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.btn-row{grid-template-columns:1fr}}
+.big{font-size:1.8rem;font-weight:800;text-align:center;margin:8px 0}
+.rv{border-top:1px solid var(--line);padding:10px 0}.rv .t{font-weight:700}.c{color:#15803d}.w{color:#b91c1c}
+.note{background:var(--warn-bg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:0 10px 10px 0;margin:10px 0;font-size:.95rem}
+.video-box{aspect-ratio:16/9;background:linear-gradient(135deg,#dbeafe,#eff6ff);border:2px dashed #93c5fd;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;text-align:center;color:var(--muted)}
+.video-box iframe{width:100%;height:100%;border:0;border-radius:12px}
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.footer{max-width:880px;margin:0 auto;padding:8px 14px 28px;color:var(--muted);font-size:.88rem;text-align:center}
+[hidden]{display:none!important}
+@media print{
+  .topbar{position:static;box-shadow:none}
+  .nav,.btn,#quizPanel .btn,.student-form,input,select,.tabs{display:none!important}
+  body{background:#fff;font-size:14px}
+  .card,.story,.vocab-item{box-shadow:none;border:1px solid #ccc}
+  .sec{break-inside:avoid}
+}
+.classic{font-size:1.05rem;line-height:2;letter-spacing:.02em}
+.classic p{margin:0 0 1em}
+.classic h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.classic .attr{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted);line-height:1.55}
+.yuyi{line-height:1.85}
+.yuyi p{margin:0 0 .95em}
+.yuyi h3{margin:18px 0 10px;font-size:1.1rem;color:var(--blue-dark);border-left:4px solid var(--blue);padding-left:10px}
+.sec-head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;padding-bottom:6px;border-bottom:3px solid var(--blue-mid)}
+.sec-head-row h2{margin:0;padding:0;border:0;font-size:1.35rem;color:var(--blue-dark)}
+.btn-toggle{font:inherit;font-weight:700;font-size:.88rem;min-height:40px;padding:6px 14px;border-radius:999px;border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;width:auto;margin:0}
+.btn-toggle:hover,.btn-toggle:focus{background:var(--blue);color:#fff;outline:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="school">漢華中學中國語文科</span>
+      <h1>《岳陽樓記》範文導讀</h1>
+    </div>
+    <nav class="nav" aria-label="章節導航">
+      <a href="#daodu">導讀</a>
+      <a href="#quanwen">全文</a>
+      <a href="#yuyi">語譯</a>
+      <a href="#zici">重點字詞</a>
+      <a href="#zhangfa">章法／寫作手法</a>
+      <a href="#zice">自測</a>
+      <a href="#shipin">影片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========== 1 導讀 ========== -->
+<section class="sec" id="daodu">
+  <h2>一、導讀</h2>
+  <p class="muted">對象：中四至中六　｜　篇章：《岳陽樓記》　｜　作者：范仲淹（北宋）　｜　出處：《范文正公集》</p>
+
+  <div class="card">
+    <h3>背景</h3>
+    <p>慶曆四年（公元 1044 年），滕子京（名宗諒）因遭劾奏被貶為岳州知州。翌年政通人和，乃重修岳陽樓，並請同科進士、好友范仲淹作「記」。本文約寫於慶曆六年，其時范仲淹因<strong>慶曆新政</strong>受挫，外調鄧州。文中既記重修之事、狀登樓之景，亦抒鬱結之情、述高遠之志，並以古仁人憂樂之道<strong>箴規勸慰</strong>滕子京。</p>
+  </div>
+
+  <div class="card">
+    <h3>作者簡介</h3>
+    <div class="person"><span class="pill">作者</span><strong>范仲淹</strong>（公元 989–1052），字希文，謚文正。出身孤貧，勤學苦讀，二十七歲舉進士。曾應對西夏邊務；慶曆三年上書「十事」，推動改革，史稱慶曆新政，旋因守舊勢力阻撓而罷。一生心繫社稷，勤政愛民，以「先天下之憂而憂，後天下之樂而樂」為襟懷。有《范文正公集》傳世。</div>
+  </div>
+
+  <div class="card">
+    <h3>記住三個關鍵</h3>
+    <div class="grid3" style="margin-top:10px">
+      <article class="story">
+        <h4>① 緣起・大觀</h4>
+        <dl>
+          <dt>緣起</dt><dd>滕子京謫守 → 政通人和 → 重修岳陽樓 → 屬予作文以記之。</dd>
+          <dt>大觀</dt><dd>洞庭銜山吞江，朝暉夕陰，氣象萬千；遷客騷人多會於此。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>慶曆四年滕子京被貶到巴陵，第二年政事通達、百姓和樂，於是重修岳陽樓，並囑託范仲淹寫文章記述。作者先以洞庭「銜遠山，吞長江」概括岳陽樓的浩瀚勝景，再指出被貶的官吏與失意的詩人多在此聚會，用「覽物之情，得無異乎」一問帶出下文悲喜兩段，承上啟下。</p>
+      </article>
+      <article class="story">
+        <h4>② 陰晴悲喜</h4>
+        <dl>
+          <dt>陰景</dt><dd>霪雨濁浪、虎嘯猿啼 → 去國懷鄉，憂讒畏譏，感極而悲。</dd>
+          <dt>晴景</dt><dd>春和景明、沙鷗漁歌 → 心曠神怡，寵辱皆忘，其喜洋洋。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>第三段寫陰雨連月、濁浪排空的慘景，遷客騷人登樓便離開京城、懷念家鄉，擔心讒言、害怕譏諷，感觸到極點而悲傷；第四段寫春風和暢、沙鷗翔集、漁歌互答的樂景，登樓者則心胸開闊、榮辱都忘掉，喜氣洋洋。兩段正反對照，說明一般人的情感隨景物與一己際遇起伏——「以物喜、以己悲」，為末段翻出更高境界作鋪墊。</p>
+      </article>
+      <article class="story">
+        <h4>③ 先憂後樂</h4>
+        <dl>
+          <dt>胸襟</dt><dd>不以物喜，不以己悲；居廟堂憂民，處江湖憂君。</dd>
+          <dt>志向</dt><dd>先天下之憂而憂，後天下之樂而樂；微斯人，吾誰與歸。</dd>
+        </dl>
+        <p class="baihua"><strong>白話：</strong>古仁人不同於上述悲喜兩種人：不因外物好壞而歡喜，也不因自身得失而悲傷。無論在朝廷高位或退處江湖，都心憂百姓與君主——進朝也擔憂，退處也擔憂。他們的快樂在於「在天下人擔憂之前先擔憂，在天下人快樂之後才快樂」。作者願效法這樣的人，既抒發自己的志向，亦箴規勸慰同遭貶謫的滕子京；這正是全文主旨。</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>溫習口訣</h3>
+    <p>慶曆四年滕謫守，政通人和百廢興；洞庭銜山吞長江，遷客騷人覽物情；霪雨虎猿感極悲，春明沙鷗喜洋洋；不以物喜不以悲，進憂退憂何時樂；先憂後樂微斯人，岳陽樓記要記清。</p>
+  </div>
+</section>
+
+<!-- ========== 2 全文 ========== -->
+<section class="sec" id="quanwen">
+  <h2>二、全文</h2>
+  <p class="muted">范仲淹《岳陽樓記》　｜　文本依教育局「指定文言經典學習材料」參考版本</p>
+  <div class="card classic">
+    <h3>緣起</h3>
+    <p>慶曆四年春，滕子京謫守巴陵郡。越明年，政通人和，百廢具興。乃重修岳陽樓，增其舊制，刻唐賢、今人詩賦於其上；屬予作文以記之。</p>
+    <h3>洞庭大觀</h3>
+    <p>予觀夫巴陵勝狀，在洞庭一湖。銜遠山，吞長江，浩浩湯湯，橫無際涯；朝暉夕陰，氣象萬千。此則岳陽樓之大觀也，前人之述備矣。然則北通巫峽，南極瀟湘，遷客騷人，多會於此，覽物之情，得無異乎？</p>
+    <h3>陰景・悲情</h3>
+    <p>若夫霪雨霏霏，連月不開；陰風怒號，濁浪排空；日星隱耀，山岳潛形；商旅不行，檣傾楫摧；薄暮冥冥，虎嘯猿啼。登斯樓也，則有去國懷鄉，憂讒畏譏，滿目蕭然，感極而悲者矣。</p>
+    <h3>晴景・喜情</h3>
+    <p>至若春和景明，波瀾不驚，上下天光，一碧萬頃；沙鷗翔集，錦鱗游泳；岸芷汀蘭，郁郁青青。而或長煙一空，皓月千里，浮光躍金，靜影沉璧；漁歌互答，此樂何極！登斯樓也，則有心曠神怡，寵辱皆忘，把酒臨風，其喜洋洋者矣。</p>
+    <h3>古仁人之心</h3>
+    <p>嗟夫！予嘗求古仁人之心，或異二者之為。何哉？不以物喜，不以己悲。居廟堂之高，則憂其民；處江湖之遠，則憂其君。是進亦憂，退亦憂，然則何時而樂耶？其必曰：「先天下之憂而憂，後天下之樂而樂」歟！噫！微斯人，吾誰與歸！</p>
+    <p class="attr">出處：范仲淹《岳陽樓記》；文本依教育局「指定文言經典學習材料」參考版本（ks4_14_text.pdf）。註：以上僅就坊間所見資料，提供一個參考版本；教師亦可參考、使用其他版本。</p>
+  </div>
+</section>
+
+<!-- ========== 3 語譯 ========== -->
+<section class="sec" id="yuyi">
+  <div class="sec-head-row">
+    <h2>三、語譯</h2>
+    <button type="button" class="btn-toggle" id="yuyiToggle" aria-controls="yuyiBody" aria-expanded="true">隱藏語譯</button>
+  </div>
+  <div id="yuyiBody">
+  <p class="note">以下語譯供自學參考，考試請以課文原文為準。</p>
+  <div class="card yuyi">
+    <h3>緣起</h3>
+    <p>慶曆四年的春天，滕子京被貶到巴陵郡做知州。到了第二年，政事順利、百姓和樂，各種荒廢的事業都興辦起來了。於是重新修整岳陽樓，擴增它舊有的規模，把唐代名家和當代人的詩賦刻在上面，並囑託我寫文章來記述這件事。</p>
+    <h3>洞庭大觀</h3>
+    <p>我看那巴陵的美景，全在一座洞庭湖上。它口含遠山，吞納長江，水勢浩浩蕩蕩，寬廣得無邊無際；早晨日光照耀、傍晚天色陰沉，景象變化萬千。這就是岳陽樓的雄偉景觀，前人的記述已經很詳盡了。既然如此，那麼這裏北面通向巫峽，南面直達瀟湘，被貶的官吏和傷感的詩人，大多在這裏聚會，他們觀賞景物的心情，怎能沒有不同呢？</p>
+    <h3>陰景・悲情</h3>
+    <p>像那連綿的陰雨密密地下着，整月都不放晴；陰冷的風怒吼着，渾濁的浪濤衝向天空；太陽和星星隱藏了光輝，山岳也潛藏了形體；商人和旅客無法通行，桅杆倒下、船槳折斷；傍晚時分天色昏暗，老虎吼叫、猿猴悲鳴。這時登上這座樓，就會產生離開京城、懷念家鄉，擔心讒言、害怕譏諷，滿眼蕭索冷落，感觸到極點而悲傷的情緒了。</p>
+    <h3>晴景・喜情</h3>
+    <p>至於春風和暢、陽光明媚的時候，湖面波瀾平靜，上下天色湖光相接，一片碧綠萬頃無邊；沙鷗時而飛翔、時而棲息，美麗的魚兒游泳；岸邊的白芷、小洲上的蘭草，香氣濃郁、花葉茂盛。有時漫天煙霧一掃而空，皓月照耀千里，浮在水面的月光金光跳動，靜靜的月影如同沉下的玉璧；漁歌互相唱答，這種快樂哪有窮盡！這時登上這座樓，就會感到心胸開闊、精神愉快，榮寵和屈辱都忘掉了，手持酒杯迎着風，那真是喜氣洋洋啊。</p>
+    <h3>古仁人之心</h3>
+    <p>唉！我曾經探求古代品德高尚的人的心思，或許不同於上述兩種表現。為什麼呢？他們不因外物（好壞）而歡喜，也不因自己（得失）而悲傷。處在朝廷高位，就為百姓擔憂；身處江湖之遠，就為君主擔憂。這樣看來，進朝做官也擔憂，退處民間也擔憂，那麼什麼時候才快樂呢？他們一定會說：「在天下人擔憂之前先擔憂，在天下人快樂之後才快樂」吧！唉！如果沒有這樣的人，我和誰一道呢？</p>
+  </div>
+  </div>
+</section>
+
+<!-- ========== 4 重點字詞 ========== -->
+<section class="sec" id="zici">
+  <h2>四、重點字詞</h2>
+  <p class="muted">以下約十六組文言詞語／用法，宜連同課文語境記誦。（注釋參考教育局材料）</p>
+  <div class="card vocab">
+    <div class="vocab-item"><b>謫守</b><span>謫：貶謫、貶官。守：擔任太守（宋代知州別稱）。「滕子京謫守巴陵郡」。</span></div>
+    <div class="vocab-item"><b>越明年</b><span>及至第二年。越：及至、到。</span></div>
+    <div class="vocab-item"><b>具（百廢具興）</b><span>通「俱」，全部。「百廢具興」——各種廢弛的事全部興辦起來。</span></div>
+    <div class="vocab-item"><b>屬</b><span>通「囑」，囑咐。「屬予作文以記之」。</span></div>
+    <div class="vocab-item"><b>勝狀</b><span>美景。勝＝美；狀＝狀貌、形勢。</span></div>
+    <div class="vocab-item"><b>湯湯</b><span>形容水勢浩瀚。粵音「商」[soeng1]。「浩浩湯湯」。</span></div>
+    <div class="vocab-item"><b>備</b><span>完備、詳盡。「前人之述備矣」。</span></div>
+    <div class="vocab-item"><b>遷客騷人</b><span>被貶謫的官吏和失意的文人雅士。騷人：詩人（因屈原《離騷》）。</span></div>
+    <div class="vocab-item"><b>霪雨</b><span>久雨。霪通「淫」，過量。霏霏：雨絲細密。</span></div>
+    <div class="vocab-item"><b>檣傾楫摧</b><span>船隻翻覆沉沒。檣＝桅杆；楫＝船槳。</span></div>
+    <div class="vocab-item"><b>薄暮</b><span>迫近黃昏。薄通「迫」；冥冥＝昏暗。</span></div>
+    <div class="vocab-item"><b>去國</b><span>離開京城（被貶遠方）。去＝離開；國＝國都。</span></div>
+    <div class="vocab-item"><b>景（景明）</b><span>日光。「春和景明」——春日和暖、陽光明媚。</span></div>
+    <div class="vocab-item"><b>一空</b><span>全部消散。一＝全部。「長煙一空」。</span></div>
+    <div class="vocab-item"><b>微斯人</b><span>微＝無、沒有。斯人＝這樣的人（古仁人）。</span></div>
+    <div class="vocab-item"><b>吾誰與歸</b><span>即「吾與誰歸」的倒裝。歸＝效法、歸依。</span></div>
+  </div>
+</section>
+
+<!-- ========== 5 章法／寫作手法 ========== -->
+<section class="sec" id="zhangfa">
+  <h2>五、章法／寫作手法</h2>
+  <div class="card struct">
+    <h3>1. 五段脈絡：緣起 → 大觀 → 悲 → 喜 → 議論</h3>
+    <p>首段交代寫作緣由並暗揚滕績；次段概括洞庭大觀，以「覽物之情，得無異乎」引出下文；三、四段<strong>正反對照</strong>陰晴悲喜；末段翻進一層，借古仁人點出「不以物喜，不以己悲」與「先憂後樂」的主旨。</p>
+    <h3>2. 主要寫作手法</h3>
+    <ul>
+      <li><strong>緣事而發</strong>：因重修岳陽樓而作記，自然導入寫景與議論。</li>
+      <li><strong>景物對照</strong>：陰景（視聽渲染悲涼）↔ 晴景（動靜互襯、樂景喜情）。</li>
+      <li><strong>擬人</strong>：「銜遠山，吞長江」賦予洞庭吞吐力量。</li>
+      <li><strong>設問／反詰</strong>：「得無異乎」「何哉」「何時而樂耶」層層推進議論。</li>
+      <li><strong>對偶與駢散兼行</strong>：寫景多用偶句，議論以散句收束點睛。</li>
+      <li><strong>卒章顯志</strong>：篇末點明「先天下之憂而憂，後天下之樂而樂」。</li>
+    </ul>
+    <h3>3. 記敘・描寫・議論結合</h3>
+    <p>先敘修樓緣起，再描洞庭陰晴，終以議論抒懷並箴規友人；遷客騷人的悲喜，亦映照作者與滕子京的貶謫心境，再超拔至以天下為己任的境界。</p>
+    <h3>4. 結構示意</h3>
+    <p>謫守・重修・屬記 → 洞庭大觀・遷客會此 → 陰景悲情 ↔ 晴景喜情 → 古仁人：不以物喜／先憂後樂・吾誰與歸。</p>
+  </div>
+</section>
+
+<!-- ========== 6 自測 ========== -->
+<section class="sec" id="zice">
+  <h2>六、自測</h2>
+  <p class="muted">題目為校本自測（內容理解／字詞解釋／寫作手法各 20 題，合共 60 題）。可先作答；交卷前請填學生資料。</p>
+
+  <div class="card" id="studentCard">
+    <h3>學生資料（交卷必填）</h3>
+    <div class="student-form">
+      <div>
+        <label class="field" for="cls">班別</label>
+        <input class="field" id="cls" name="cls" placeholder="例：4A" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sid">學號</label>
+        <input class="field" id="sid" name="sid" placeholder="例：01" maxlength="4" autocomplete="off" required>
+      </div>
+      <div>
+        <label class="field" for="sname">姓名</label>
+        <input class="field" id="sname" name="sname" placeholder="請輸入姓名" maxlength="20" autocomplete="name" required>
+      </div>
+    </div>
+    <p class="muted" style="margin:8px 0 0">班別可用如 4A、5C、6D；學號請填兩位數字（如 01）。</p>
+  </div>
+
+  <div class="overall" id="overallBox">
+    <div class="prog-row"><strong>整體進度</strong><span id="overallText">0 / 60 題　總分 0</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" id="overallBar"><div id="overallFill"></div></div>
+    <div class="prog-row" style="margin-top:8px;font-size:.9rem">
+      <span>內容理解：<b id="scContent">0</b>/20</span>
+      <span>字詞解釋：<b id="scVocab">0</b>/20</span>
+      <span>寫作手法：<b id="scRhet">0</b>/20</span>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="練習部分">
+    <button type="button" role="tab" id="tab-content" aria-selected="true" aria-controls="panel-quiz" data-sec="content">內容理解（20）</button>
+    <button type="button" role="tab" id="tab-vocab" aria-selected="false" aria-controls="panel-quiz" data-sec="vocab">字詞解釋（20）</button>
+    <button type="button" role="tab" id="tab-rhet" aria-selected="false" aria-controls="panel-quiz" data-sec="rhetorical">寫作手法（20）</button>
+  </div>
+
+  <div class="card" id="panel-quiz" role="tabpanel">
+    <div class="prog-row"><span id="secProgText">第 1 / 20 題</span><span id="secScoreText">本節答對：0</span></div>
+    <div class="bar" id="secBar" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="secFill"></div></div>
+    <form id="qform" onsubmit="return false" style="margin-top:12px">
+      <fieldset style="border:0;margin:0;padding:0">
+        <legend class="stem" id="stem"></legend>
+        <div id="opts"></div>
+      </fieldset>
+      <div id="fb" class="fb" hidden></div>
+      <button type="button" class="btn" id="checkBtn" disabled>檢查答案</button>
+      <div class="btn-row">
+        <button type="button" class="btn sec" id="nextBtn" hidden>下一題</button>
+        <button type="button" class="btn ok" id="secDoneBtn" hidden>完成本節</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" id="secResult" hidden>
+    <h3 id="secResultTitle">本節完成</h3>
+    <p class="big" id="secFinal"></p>
+    <p id="secFinalMsg" class="muted" style="text-align:center"></p>
+    <div class="btn-row">
+      <button type="button" class="btn sec" id="retrySecBtn">重做本節</button>
+      <button type="button" class="btn" id="goNextSecBtn">下一節</button>
+    </div>
+    <button type="button" class="btn warn" id="submitEarlyBtn" style="margin-top:10px" hidden>交卷（已完成全部）</button>
+    <h3>答題回顧</h3>
+    <div id="secReview"></div>
+  </div>
+
+  <div class="card" id="finalResult" hidden>
+    <h3>全部完成・交卷</h3>
+    <p class="big" id="finalScore"></p>
+    <p id="finalDetail" style="text-align:center"></p>
+    <p id="submitMsg" class="note" hidden></p>
+    <div class="btn-row">
+      <button type="button" class="btn ok" id="submitBtn">交卷至老師試算表</button>
+      <button type="button" class="btn sec" id="retryAllBtn">全部重做</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7 影片 ========== -->
+<section class="sec" id="shipin">
+  <h2>七、影片｜寶寶老師陪你快速溫範文</h2>
+  <div class="card">
+    <p><a id="videoTitleLink" href="#" target="_blank" rel="noopener">寶寶老師陪你快速溫範文｜《岳陽樓記》</a></p>
+    <div id="videoArea"></div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">漢華中學中國語文科　｜　《岳陽樓記》範文導讀　｜　供課堂投影及學生自學</footer>
+
+<script>
+(function () {
+"use strict";
+
+/* ===== 老師設定（部署後請填寫 GAS；影片 ID 已由 VPA 確認） ===== */
+const GAS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbz9oGrzKP3B8E-NELaqMT2QFeVUgkFg8cSTRUcJShmomxvBOanMYjSF0m4mKbcsNH18/exec";
+const YOUTUBE_ID = "byd4FOU3OGI";
+
+/* ===== 題庫：校本自測；o[0] 為正確答案 ===== */
+var Q_CONTENT = [{"s":"本文寫作緣起是：","o":["滕子京重修岳陽樓，囑咐作者作文以記之","作者親自登樓遊覽後即興而作","宋仁宗下詔命范仲淹作記","為慶曆新政歌功頌德"],"e":"首段「屬予作文以記之」點明寫作緣由。"},{"s":"「慶曆四年春」指的是：","o":["公元1044年春（宋仁宗慶曆年號）","唐太宗貞觀四年","北宋開國之年","范仲淹中進士那年"],"e":"慶曆為宋仁宗年號；慶曆四年即公元1044年。"},{"s":"「滕子京謫守巴陵郡」中「謫守」的意思最接近：","o":["被貶謫後擔任巴陵郡長官","自願調任巴陵郡守","暫時代理巴陵郡事務","因軍功升任太守"],"e":"謫＝貶謫；守＝擔任太守（知州別稱）。"},{"s":"「越明年，政通人和，百廢具興」說明滕子京：","o":["到任次年政事通達、民生和樂，各項廢弛事務一齊振興","明年才開始修樓，政事毫無進展","只顧修樓，不理政事","政績全靠范仲淹協助"],"e":"暗揚滕的政績，為重修岳陽樓鋪墊。"},{"s":"「百廢具興」的「具」字意思是：","o":["通「俱」，全部","具備、工具","具體","具名簽署"],"e":"教育局注：具通「俱」，全部。"},{"s":"作者認為巴陵勝狀主要在於：","o":["洞庭一湖","岳陽樓的雕刻","唐賢詩賦","巫峽風景"],"e":"「予觀夫巴陵勝狀，在洞庭一湖。」"},{"s":"「銜遠山，吞長江，浩浩湯湯，橫無際涯」主要描寫：","o":["洞庭湖吞吐山川、水勢浩瀚無邊的大觀","岳陽樓建築的高大","長江三峽的險峻","春日花開的景色"],"e":"次段概括岳陽樓所見洞庭勝景。"},{"s":"「遷客騷人，多會於此」的「遷客騷人」指：","o":["被貶謫的官吏和失意的文人雅士","過往的商人旅客","本地的漁民農夫","朝廷派來的監察御史"],"e":"遷客＝貶謫官吏；騷人＝詩人／失意文人。"},{"s":"「覽物之情，得無異乎？」的作用是：","o":["以反詰語氣引出下文陰晴不同、悲喜異情","斷言眾人情感完全相同","結束全文","批評前人寫景不足"],"e":"承上啟下，引出三、四段對照。"},{"s":"第三段陰景中，遷客騷人登樓的心情是：","o":["去國懷鄉，憂讒畏譏，感極而悲","心曠神怡，寵辱皆忘","把酒臨風，其喜洋洋","漠然無感"],"e":"「感極而悲者矣」。"},{"s":"「日星隱耀，山岳潛形」描寫的是：","o":["陰雨天日月星辰隱沒光輝、山岳看不清形狀","晴夜星空燦爛","朝暉夕陰的壯美","春日山花盛開"],"e":"陰景：天色昏暗，景物隱沒。"},{"s":"第四段「春和景明」時，遷客騷人的情感是：","o":["心曠神怡，寵辱皆忘，其喜洋洋","感極而悲","憂讒畏譏","去國懷鄉"],"e":"樂景引出喜情，與第三段對照。"},{"s":"「浮光躍金，靜影沉璧」描寫的是：","o":["月夜湖面波光閃爍與月影如玉沉於水中","日出時金色雲霞","漁船燈火","金銀珠寶沉入湖底"],"e":"浮光躍金＝水面月影金光；靜影沉璧＝月影如璧。"},{"s":"「不以物喜，不以己悲」的意思是：","o":["不因外物變化或一己際遇而悲喜","不要喜歡外物，也不要為自己悲傷","外物與自己都無關緊要","應以物喜、以己悲"],"e":"古仁人有別於遷客騷人的地方。"},{"s":"「居廟堂之高，則憂其民；處江湖之遠，則憂其君」說明古仁人：","o":["無論在朝或在野，都心憂天下（進亦憂，退亦憂）","只在朝廷任官時才關心百姓","被貶後就不再關心國事","只憂自己的功名"],"e":"進退皆憂國憂民。"},{"s":"全文點明作者志向的名句是：","o":["先天下之憂而憂，後天下之樂而樂","政通人和，百廢具興","銜遠山，吞長江","沙鷗翔集，錦鱗游泳"],"e":"第五段借古仁人之口表露心志。"},{"s":"「微斯人，吾誰與歸」表達作者：","o":["若無古仁人這類人，自己將與誰同道／歸依","批評滕子京不夠朋友","拒絕與任何人來往","不知道回鄉之路"],"e":"微＝無；吾誰與歸＝吾與誰歸（倒裝）。"},{"s":"本文主旨最接近：","o":["借記樓抒「不以物喜，不以己悲」的胸襟與「先憂後樂」的抱負","純粹描寫洞庭湖風景名勝","為滕子京鳴冤翻案","勸人及時行樂"],"e":"教育局賞析重點：豁達胸襟與政治抱負。"},{"s":"范仲淹寫此文時大致處境是：","o":["慶曆新政受挫後外調鄧州，應滕子京之請而作","正任宰相推行新政","隱居洞庭湖邊","在岳陽樓任職"],"e":"背景：新政失敗外調鄧州，約慶曆六年作。"},{"s":"三、四兩段在結構上的作用是：","o":["正反對照寫遷客騷人因景而生悲喜，為後文翻出古仁人境界作鋪墊","重複描寫同一景色","與主旨無關的遊記","只為展示辭藻"],"e":"先寫二者之為，再對比古仁人之心。"}];
+var Q_VOCAB = [{"s":"「謫守巴陵郡」中「謫」的意思是：","o":["貶謫、貶官","責備","抽調","請假"],"e":"謫＝貶謫。"},{"s":"「屬予作文以記之」中「屬」的意思是：","o":["通「囑」，囑咐","屬於","連續","寫文章的屬性"],"e":"教育局注：屬通「囑」。"},{"s":"「勝狀」的意思是：","o":["美景","打勝仗的情狀","勝過他人的表現","訴訟勝訴"],"e":"勝＝美；狀＝狀貌、形勢。"},{"s":"「浩浩湯湯」中「湯湯」讀音與意思：","o":["粵音「商」，形容水勢浩瀚","粵音「湯」，熱水滾燙","粵音「燙」，燙傷","粵音「盪」，搖盪"],"e":"湯湯：水勢浩瀚。○粵[soeng1]。"},{"s":"「前人之述備矣」中「備」的意思是：","o":["完備、詳盡","準備","防備","設備"],"e":"前人描述已很詳盡。"},{"s":"「南極瀟湘」中「極」的意思是：","o":["到達盡頭、遠達","極其寒冷","北極星","極力"],"e":"南極＝向南遠達瀟湘。"},{"s":"「霪雨霏霏」中「霪雨」的意思是：","o":["久雨（霪通「淫」，過量）","細雪","春雨潤物","雷陣雨"],"e":"霪雨＝久雨；霏霏＝雨絲細密。"},{"s":"「檣傾楫摧」中「檣」「楫」分別指：","o":["船桅杆；船槳","船艙；船錨","帆布；舵","船頭；船尾"],"e":"檣傾楫摧＝船隻翻覆沉沒。"},{"s":"「薄暮冥冥」中「薄」的意思是：","o":["通「迫」，迫近","薄情","輕薄","單薄"],"e":"薄暮＝迫近黃昏。"},{"s":"「去國懷鄉」中「去國」的意思是：","o":["離開京城（被貶遠方）","出國留學","離開祖國投敵","辭去國籍"],"e":"去＝離開；國＝國都／京師。"},{"s":"「憂讒畏譏」的意思是：","o":["擔心別人進讒言、害怕譏諷","憂慮讒言會自動消失","喜歡聽譏諷","不怕任何批評"],"e":"遷客常見心態。"},{"s":"「春和景明」中「景」的意思是：","o":["日光","風景照片","情景劇","景仰"],"e":"景明＝陽光燦爛；景＝日光。"},{"s":"「沙鷗翔集」中「集」的意思是：","o":["聚集、棲息","收集標本","集市","編輯成集"],"e":"翔＝飛；集＝棲息聚集。"},{"s":"「岸芷汀蘭」中「汀」的意思是：","o":["小洲","水井","碼頭","山坡"],"e":"汀＝小洲；芷、蘭為香草。"},{"s":"「長煙一空」中「一」的意思是：","o":["全部","一次","統一","一點點"],"e":"一空＝全部消散。"},{"s":"「把酒臨風」中「把」「臨」的意思是：","o":["持（酒杯）；對／迎（風）","放下；離開","分享；躲避","釀造；逆着"],"e":"把＝持；臨＝對、迎。"},{"s":"「或異二者之為」中「或」的意思是：","o":["或許（委婉語氣）","或者二選一","有的人","迷惑"],"e":"或＝或許；二者＝悲者與喜者。"},{"s":"「居廟堂之高」中「廟堂」指：","o":["朝廷","寺廟大堂","宗廟祭堂","議事亭"],"e":"廟堂＝朝廷。"},{"s":"「微斯人」中「微」的意思是：","o":["無、沒有","微小","稍微","微服"],"e":"微斯人＝若沒有這樣的人。"},{"s":"「吾誰與歸」的句式特點是：","o":["賓語前置／倒裝，即「吾與誰歸」","省略主語","被動句","判斷句"],"e":"歸＝效法、歸依。"}];
+var Q_RHET = [{"s":"首段「乃重修岳陽樓……屬予作文以記之」在全文的作用是：","o":["交代寫作緣由，並暗揚滕子京政績與修樓推廣文教","純寫景起興","設置偵探式懸念","批評滕子京鋪張"],"e":"「乃」承接政通人和，記修樓緣起。"},{"s":"「銜遠山，吞長江」主要運用的修辭是：","o":["擬人（山湖如口含、吞吐）","誇張數字","反問","頂真"],"e":"以「銜」「吞」賦予洞庭動態力量。"},{"s":"次段「前人之述備矣」後「然則……得無異乎」的轉折作用是：","o":["由大觀轉入覽物之情，用反詰引出下文悲喜","結束全文","重複前文景色","轉寫人物外貌"],"e":"轉換筆鋒，承上啟下。"},{"s":"第三段寫陰景時「霪雨霏霏……虎嘯猿啼」主要調動：","o":["視覺與聽覺，渲染陰森悲涼氣氛","味覺與嗅覺","純議論無描寫","數字統計"],"e":"視聽結合，氣氛悲涼。"},{"s":"「商旅不行，檣傾楫摧」的表達效果是：","o":["極寫惡劣天氣對人的威脅，加深悲景感染力","介紹古代航運路線","諷刺商人貪婪","說明應禁止航行"],"e":"由景及人，強化威脅感。"},{"s":"第四段「沙鷗翔集，錦鱗游泳；岸芷汀蘭，郁郁青青」的特點是：","o":["動靜互襯、細處落筆，寫出生氣盎然的樂景","只寫靜物","純抽象說理","諷刺遷客"],"e":"動物動態與植物欣榮構成暖色畫面。"},{"s":"「浮光躍金」與「靜影沉璧」形成：","o":["動靜對照的對偶描寫","因果推理","設問","引用典故原文"],"e":"躍金為動，沉璧為靜。"},{"s":"三、四兩段整體採用的結構手法是：","o":["正反對照（陰景悲情 ↔ 晴景喜情）","倒敘","補敘家世","意識流"],"e":"為後文翻出古仁人境界鋪墊。"},{"s":"「登斯樓也，則有……者矣」在三、四段重複出現，作用是：","o":["句式呼應，凸顯因景而生的不同情感","無意義重複","轉換為書信格式","表示時間推移"],"e":"同一句式對照悲喜。"},{"s":"第五段以「嗟夫」領起，表達效果是：","o":["感喟領起議論，示不甘為世俗悲喜桎梏","表示文章寫完","嘲笑讀者","純表時間"],"e":"轉入探求古仁人之心。"},{"s":"「何哉？」「然則何時而樂耶？」連續設問的作用是：","o":["層層推進，引出不以物喜／先憂後樂的議論","製造混亂","代替描寫景色","嘲諷古仁人"],"e":"設問引論，邏輯清晰。"},{"s":"「居廟堂之高……處江湖之遠……是進亦憂，退亦憂」運用了：","o":["對偶／對照兼層遞，說明進退皆憂","純誇張","雙關諧音","小說對話"],"e":"朝野對舉，歸結進退皆憂。"},{"s":"「先天下之憂而憂，後天下之樂而樂」在章法上屬於：","o":["卒章顯志，點明全文主旨與作者抱負","開篇點題","插叙","景物收束"],"e":"篇末點明題旨。"},{"s":"「歟」「噫」兩個感歎詞連用，主要表達：","o":["對古仁人的敬佩讚歎與自我期許","對滕子京的憤怒","對洞庭湖的恐懼","對考試的無奈"],"e":"感情強烈，收束心志。"},{"s":"全文由記事→寫景→抒情→議論的順序，屬於：","o":["先敘後議、層層深入的記敘議論結合","純記敘無議論","純議論無記敘","書信體往復"],"e":"典型「記」體章法。"},{"s":"文中「遷客騷人」的覽物之情，實際上也影射：","o":["作者與滕子京被貶的處境與心境","無關的路人","宋仁宗本人","唐代張說"],"e":"賞析：二者之為亦是作者與滕的寫照。"},{"s":"作者寫洞庭大觀時並未親臨現場，主要依靠：","o":["豐富想像（滕附《洞庭晚秋圖》供參）與概括力","實地測量數據","抄襲前人全篇","官方地圖說明書原文"],"e":"范在鄧州；以想像寫現場難一時盡見之景。"},{"s":"「不以物喜，不以己悲」與前文悲喜兩段的關係是：","o":["翻出新意：超越遷客騷人因景悲喜的境界","完全否定前文描寫的真實性","只重複前文結論","與前文無關"],"e":"先立「二者之為」，再翻進一層。"},{"s":"本文最突出的寫作特色組合是：","o":["緣事而發＋景物對照＋議論點題＋駢散兼行","只有數字枚舉","純人物對話","意識流內心獨白"],"e":"符合課文章法重點。"},{"s":"「刻唐賢、今人詩賦於其上」一句，除記修樓細節外，還暗示：","o":["重修旨在推廣文教，非為鋪張炫耀","樓頂必須刻滿廣告","禁止再寫詩賦","唐詩優於宋詩"],"e":"賞析：暗示文教用意，簡括有力。"}];
+
+var SECTIONS = {
+  content: { key: 'content', title: '內容理解', Q: Q_CONTENT },
+  vocab: { key: 'vocab', title: '字詞解釋', Q: Q_VOCAB },
+  rhetorical: { key: 'rhetorical', title: '寫作手法', Q: Q_RHET }
+};
+var SEC_ORDER = ['content', 'vocab', 'rhetorical'];
+var MAX_TOTAL = 60;
+var DRAFT_KEY = 'yueyanglou_daodu_draft';
+
+function shuffle(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function $(id) { return document.getElementById(id); }
+
+var state = {};
+SEC_ORDER.forEach(function (k) {
+  state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+});
+var currentSec = 'content';
+
+function studentInfo() {
+  return {
+    class: ($('cls').value || '').trim().toUpperCase(),
+    studentId: ($('sid').value || '').trim(),
+    name: ($('sname').value || '').trim()
+  };
+}
+function requireStudent() {
+  var s = studentInfo();
+  if (!s.class || !s.studentId || !s.name) {
+    alert('請先填寫班別、學號、姓名，再開始或交卷。');
+    $('studentCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('cls').focus();
+    return null;
+  }
+  return s;
+}
+
+function prepareOrder(secKey) {
+  var Q = SECTIONS[secKey].Q;
+  return Q.map(function (q) {
+    return { s: q.s, e: q.e, ans: q.o[0], o: shuffle(q.o) };
+  });
+}
+
+function startSection(secKey, force) {
+  currentSec = secKey;
+  var st = state[secKey];
+  if (force || !st.order) {
+    st.order = prepareOrder(secKey);
+    st.cur = 0;
+    st.answers = [];
+    st.finished = false;
+    st.score = 0;
+  }
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    var on = b.getAttribute('data-sec') === secKey;
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+    b.classList.toggle('active', on);
+  });
+  $('finalResult').hidden = true;
+  if (st.finished) {
+    $('panel-quiz').hidden = true;
+    showSecResult(secKey);
+  } else {
+    $('secResult').hidden = true;
+    $('panel-quiz').hidden = false;
+    showQuestion();
+  }
+  updateOverall();
+}
+
+function setSecScore(secKey) {
+  var st = state[secKey];
+  var s = 0;
+  for (var i = 0; i < st.answers.length; i++) {
+    if (st.answers[i] && st.answers[i].ok) s++;
+  }
+  st.score = s;
+  return s;
+}
+
+function updateOverall() {
+  var done = 0, totalScore = 0;
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var answered = st.answers.filter(function (a) { return a; }).length;
+    done += answered;
+    totalScore += setSecScore(k);
+  });
+  $('overallFill').style.width = (done / MAX_TOTAL * 100) + '%';
+  $('overallBar').setAttribute('aria-valuenow', String(done));
+  $('overallText').textContent = done + ' / ' + MAX_TOTAL + ' 題　總分 ' + totalScore;
+  $('scContent').textContent = state.content.score;
+  $('scVocab').textContent = state.vocab.score;
+  $('scRhet').textContent = state.rhetorical.score;
+
+  var allDone = SEC_ORDER.every(function (k) { return state[k].finished; });
+  if (allDone) {
+    $('submitEarlyBtn').hidden = false;
+    showFinal();
+  }
+}
+
+function showQuestion() {
+  var st = state[currentSec];
+  var q = st.order[st.cur];
+  var N = st.order.length;
+  st._picked = null;
+  st._checked = false;
+  $('stem').textContent = (st.cur + 1) + '. ' + q.s;
+  var box = $('opts');
+  box.innerHTML = '';
+  q.o.forEach(function (t, i) {
+    var l = document.createElement('label');
+    l.className = 'opt';
+    var r = document.createElement('input');
+    r.type = 'radio'; r.name = 'opt'; r.value = String(i);
+    var sp = document.createElement('span');
+    sp.textContent = String.fromCharCode(65 + i) + '. ' + t;
+    l.appendChild(r); l.appendChild(sp);
+    r.addEventListener('change', function () {
+      if (st._checked) return;
+      st._picked = i;
+      Array.prototype.forEach.call(box.children, function (c) { c.classList.remove('sel'); });
+      l.classList.add('sel');
+      $('checkBtn').disabled = false;
+    });
+    box.appendChild(l);
+  });
+  $('fb').hidden = true;
+  $('checkBtn').hidden = false;
+  $('checkBtn').disabled = true;
+  $('nextBtn').hidden = true;
+  $('secDoneBtn').hidden = true;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('secBar').setAttribute('aria-valuenow', String(answered));
+  $('secProgText').textContent = '第 ' + (st.cur + 1) + ' / ' + N + ' 題';
+  $('secScoreText').textContent = '本節答對：' + st.score;
+}
+
+function checkAnswer() {
+  var st = state[currentSec];
+  if (st._checked || st._picked === null) return;
+  st._checked = true;
+  $('checkBtn').disabled = true;
+  var q = st.order[st.cur];
+  var ok = q.o[st._picked] === q.ans;
+  st.answers[st.cur] = { ok: ok, pick: q.o[st._picked], ans: q.ans, idx: st.cur };
+  var labs = $('opts').children;
+  for (var i = 0; i < labs.length; i++) {
+    labs[i].querySelector('input').disabled = true;
+    if (q.o[i] === q.ans) labs[i].classList.add('ok');
+    else if (i === st._picked) labs[i].classList.add('bad');
+  }
+  var fb = $('fb');
+  fb.hidden = false;
+  fb.className = 'fb ' + (ok ? 'ok' : 'bad');
+  fb.textContent = (ok ? '✔ 答對了！' : '✘ 答錯了。正確答案：' + q.ans) + '　解說：' + q.e;
+  setSecScore(currentSec);
+  updateOverall();
+  $('secScoreText').textContent = '本節答對：' + st.score;
+  var answered = st.answers.filter(function (a) { return a; }).length;
+  var N = st.order.length;
+  $('secFill').style.width = (answered / N * 100) + '%';
+  $('checkBtn').hidden = true;
+  if (st.cur < N - 1) $('nextBtn').hidden = false;
+  else $('secDoneBtn').hidden = false;
+}
+
+function nextQuestion() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  if (st.cur < st.order.length - 1) {
+    st.cur++;
+    showQuestion();
+  }
+}
+
+function finishSection() {
+  var st = state[currentSec];
+  if (!st._checked) return;
+  st.finished = true;
+  setSecScore(currentSec);
+  updateOverall();
+  showSecResult(currentSec);
+  saveDraft();
+  if (SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    showFinal();
+  }
+}
+
+function showSecResult(secKey) {
+  var st = state[secKey];
+  var N = SECTIONS[secKey].Q.length;
+  $('panel-quiz').hidden = true;
+  $('secResult').hidden = false;
+  $('secResultTitle').textContent = SECTIONS[secKey].title + '・本節完成';
+  $('secFinal').textContent = '得分：' + st.score + ' / ' + N;
+  var p = st.score / N;
+  $('secFinalMsg').textContent = p >= 0.8 ? '表現出色，繼續保持！' : p >= 0.5 ? '不錯，請重溫答錯的題目。' : '請細閱課文及解說，再試一次。';
+  var rv = $('secReview');
+  rv.innerHTML = '';
+  st.order.forEach(function (q, i) {
+    var a = st.answers[i];
+    if (!a) return;
+    var d = document.createElement('div');
+    d.className = 'rv';
+    var t = document.createElement('div');
+    t.className = 't';
+    t.textContent = (i + 1) + '. ' + q.s;
+    var r = document.createElement('div');
+    r.className = a.ok ? 'c' : 'w';
+    r.textContent = (a.ok ? '✔ 你的答案：' : '✘ 你的答案：') + a.pick + (a.ok ? '' : '｜正確答案：' + q.ans);
+    var e = document.createElement('div');
+    e.className = 'muted';
+    e.textContent = '解說：' + q.e;
+    d.appendChild(t); d.appendChild(r); d.appendChild(e);
+    rv.appendChild(d);
+  });
+  var idx = SEC_ORDER.indexOf(secKey);
+  var nextKey = idx < SEC_ORDER.length - 1 ? SEC_ORDER[idx + 1] : null;
+  $('goNextSecBtn').hidden = !nextKey;
+  $('goNextSecBtn').textContent = nextKey ? '前往「' + SECTIONS[nextKey].title + '」' : '';
+  $('goNextSecBtn').onclick = nextKey ? function () {
+    startSection(nextKey, false);
+    $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } : null;
+  $('submitEarlyBtn').hidden = !SEC_ORDER.every(function (k) { return state[k].finished; });
+}
+
+function wrongSummary() {
+  var parts = [];
+  SEC_ORDER.forEach(function (k) {
+    var st = state[k];
+    var wrong = [];
+    st.answers.forEach(function (a, i) {
+      if (a && !a.ok) wrong.push(i + 1);
+    });
+    if (wrong.length) parts.push(SECTIONS[k].title + '錯題:' + wrong.join(','));
+  });
+  return parts.join('；') || '全對';
+}
+
+function buildPayload(stu) {
+  var sc = state.content.score;
+  var sv = state.vocab.score;
+  var sr = state.rhetorical.score;
+  var total = sc + sv + sr;
+  return {
+    timestamp: new Date().toISOString(),
+    class: stu.class,
+    studentId: stu.studentId,
+    name: stu.name,
+    scoreContent: sc,
+    scoreVocab: sv,
+    scoreRhetorical: sr,
+    scoreTotal: total,
+    maxTotal: MAX_TOTAL,
+    percent: Math.round(total / MAX_TOTAL * 1000) / 10,
+    answersSummary: wrongSummary(),
+    userAgent: navigator.userAgent || ''
+  };
+}
+
+function showFinal() {
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) return;
+  $('finalResult').hidden = false;
+  var total = state.content.score + state.vocab.score + state.rhetorical.score;
+  $('finalScore').textContent = '總分：' + total + ' / ' + MAX_TOTAL;
+  $('finalDetail').innerHTML =
+    '內容理解 ' + state.content.score + '/20　｜　字詞解釋 ' + state.vocab.score +
+    '/20　｜　寫作手法 ' + state.rhetorical.score + '/20<br>正確率 ' +
+    (Math.round(total / MAX_TOTAL * 1000) / 10) + '%';
+  saveDraft();
+}
+
+function saveDraft() {
+  try {
+    var stu = studentInfo();
+    var draft = {
+      student: stu,
+      scores: {
+        content: state.content.score,
+        vocab: state.vocab.score,
+        rhetorical: state.rhetorical.score
+      },
+      finished: SEC_ORDER.map(function (k) { return { k: k, done: state[k].finished, score: state[k].score }; }),
+      summary: wrongSummary(),
+      savedAt: new Date().toISOString()
+    };
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+  } catch (e) {}
+}
+
+function submitToSheet() {
+  var stu = requireStudent();
+  if (!stu) return;
+  if (!SEC_ORDER.every(function (k) { return state[k].finished; })) {
+    alert('請先完成三個部分的全部題目，再交卷。');
+    return;
+  }
+  var payload = buildPayload(stu);
+  saveDraft();
+  var msg = $('submitMsg');
+  msg.hidden = false;
+
+  if (!GAS_WEBAPP_URL) {
+    msg.textContent = '⚠ 尚未設定試算表交卷網址，成績只保存在本機（localStorage 草稿），未能上傳老師試算表。請老師在 HTML 腳本頂部貼上 Apps Script 網頁應用程式網址。';
+    return;
+  }
+  msg.textContent = '正在上傳成績…';
+  $('submitBtn').disabled = true;
+  fetch(GAS_WEBAPP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(function () {
+    msg.textContent = '✔ 已送出交卷請求。若老師試算表「交卷紀錄」出現新列，即表示成功。';
+    $('submitBtn').disabled = false;
+  }).catch(function () {
+    msg.textContent = '✘ 上傳失敗，請檢查網絡後再試。本機草稿已保存。';
+    $('submitBtn').disabled = false;
+  });
+}
+
+var yuyiToggle = $('yuyiToggle');
+var yuyiBody = $('yuyiBody');
+if (yuyiToggle && yuyiBody) {
+  yuyiToggle.addEventListener('click', function () {
+    var hide = !yuyiBody.hidden;
+    yuyiBody.hidden = hide;
+    yuyiToggle.setAttribute('aria-expanded', hide ? 'false' : 'true');
+    yuyiToggle.textContent = hide ? '顯示語譯' : '隱藏語譯';
+  });
+}
+
+function renderVideo() {
+  var area = $('videoArea');
+  var link = $('videoTitleLink');
+  var title = '寶寶老師陪你快速溫範文｜《岳陽樓記》';
+  if (YOUTUBE_ID) {
+    link.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(YOUTUBE_ID);
+    area.innerHTML = '<div class="video-wrap"><iframe src="https://www.youtube.com/embed/' +
+      encodeURIComponent(YOUTUBE_ID) + '" title="' + title + '" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+  } else {
+    link.href = '#shipin';
+    link.removeAttribute('target');
+    area.innerHTML = '<div class="video-box"><strong>影片即將上線</strong><span>' + title + '</span></div>';
+  }
+}
+
+document.querySelectorAll('.tabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    startSection(b.getAttribute('data-sec'), false);
+  });
+});
+$('checkBtn').addEventListener('click', checkAnswer);
+$('nextBtn').addEventListener('click', nextQuestion);
+$('secDoneBtn').addEventListener('click', finishSection);
+$('retrySecBtn').addEventListener('click', function () {
+  startSection(currentSec, true);
+  $('zice').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('submitBtn').addEventListener('click', submitToSheet);
+$('submitEarlyBtn').addEventListener('click', function () {
+  showFinal();
+  $('finalResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+$('retryAllBtn').addEventListener('click', function () {
+  if (!confirm('確定全部重做？目前得分將重置。')) return;
+  SEC_ORDER.forEach(function (k) {
+    state[k] = { order: null, cur: 0, answers: [], finished: false, score: 0 };
+  });
+  $('finalResult').hidden = true;
+  startSection('content', true);
+  updateOverall();
+});
+
+try {
+  var d = localStorage.getItem(DRAFT_KEY);
+  if (d) {
+    var draft = JSON.parse(d);
+    if (draft.student) {
+      if (draft.student.class) $('cls').value = draft.student.class;
+      if (draft.student.studentId) $('sid').value = draft.student.studentId;
+      if (draft.student.name) $('sname').value = draft.student.name;
+    }
+  }
+} catch (e) {}
+
+renderVideo();
+updateOverall();
+startSection('content', false);
+
+})();
+</script>
+</body>
+</html>
